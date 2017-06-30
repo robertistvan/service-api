@@ -18,16 +18,16 @@ rp:
   uat:
     serviceUrl: http://uat:8080
   mongo:
-    host: mongodb
-    port: 27017
+    host: ${MONGO_HOST:mongodb}
+    port: ${MONGO_PORT:27017}
     dbName: reportportal
     user:
     password:
 
 spring:
   redis:
-    host: redis
-    port: 6379
+    host: ${REDIS_HOST:redis}
+    port: ${REDIS_PORT:6379}
   cloud:
     consul:
       host: registry
