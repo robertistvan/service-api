@@ -4,6 +4,7 @@ server:
 eureka:
   instance:
     hostname: ${HOSTNAME:api}
+    preferIpAddress: ${PREFER_IP:false}
   client:
     serviceUrl:
       defaultZone: http://${REGISTRY_HOST:registry}:${SERVICE_REGISTRY_PORT:8761}/eureka/
@@ -32,4 +33,4 @@ spring:
       host: registry
       discovery:
         hostname: api
-        prefer-ip-address: ${PREFER_IP:false}
+        prefer-ip-address: false
