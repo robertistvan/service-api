@@ -6,7 +6,7 @@ eureka:
     hostname: ${HOSTNAME:api}
   client:
     serviceUrl:
-      defaultZone: http://${REGISTRY_HOST:registry}:8761/eureka/
+      defaultZone: http://${REGISTRY_HOST:registry}:${SERVICE_REGISTRY_PORT:8761}/eureka/
 
 security:
   oauth2:
